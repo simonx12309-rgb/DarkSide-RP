@@ -25,7 +25,7 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Made with ❤️",
+        name: "",
         // Activity type number (0 = Playing).
         type: 0, 
       },
@@ -164,7 +164,7 @@ export const botConfig = {
     },
 
     // Starting balance for new users.
-    startingBalance: 0,
+    startingBalance: 500,
 
     // Maximum bank amount before upgrades (if upgrades are used).
     baseBankCapacity: 100000,
@@ -181,7 +181,7 @@ export const botConfig = {
     begMax: 50,
 
     // Chance to succeed when robbing (0.4 = 40%).
-    robSuccessRate: 0.4,
+    robSuccessRate: 0.2,
 
     // Jail time after failed rob (milliseconds).
     // 3600000 = 1 hour.
@@ -445,8 +445,8 @@ export const botConfig = {
     // Community engagement systems.
     tickets: true,
     giveaways: true,
-    birthday: true,
-    counter: true,
+    birthday: false,
+    counter: false,
 
     // Security and self-service systems.
     verification: true,
@@ -454,12 +454,12 @@ export const botConfig = {
     joinToCreate: true,
 
     // Utility/quality-of-life modules.
-    voice: true,
-    search: true,
-    tools: true,
-    utility: true,
-    community: true,
-    fun: true,
+    voice: false,
+    search: false,
+    tools: false,
+    utility: false,
+    community: false,
+    fun: false,
   },
 };
 
