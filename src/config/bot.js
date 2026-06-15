@@ -447,7 +447,7 @@ export const botConfig = {
     community: false,
     fun: false,
   },
-};
+
 
 
 export function validateConfig(config) {
