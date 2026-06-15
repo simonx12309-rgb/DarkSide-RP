@@ -448,6 +448,8 @@ export const botConfig = {
     fun: false,
   },
 
+
+    
 export function validateConfig(config) {
   const errors = [];
 
