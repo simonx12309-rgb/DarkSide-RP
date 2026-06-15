@@ -25,9 +25,9 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "",
+        name: "Made with ❤️",
         // Activity type number (0 = Playing).
-        type: 1, 
+        type: 0, 
       },
     ],
   },
@@ -164,7 +164,7 @@ export const botConfig = {
     },
 
     // Starting balance for new users.
-    startingBalance: 500,
+    startingBalance: 0,
 
     // Maximum bank amount before upgrades (if upgrades are used).
     baseBankCapacity: 100000,
@@ -178,14 +178,14 @@ export const botConfig = {
 
     // Beg command random payout range.
     begMin: 5,
-    begMax: 10,
+    begMax: 50,
 
     // Chance to succeed when robbing (0.4 = 40%).
-    robSuccessRate: 0.2,
+    robSuccessRate: 0.4,
 
     // Jail time after failed rob (milliseconds).
     // 3600000 = 1 hour.
-    robFailJailTime: 18000000, 
+    robFailJailTime: 3600000, 
   },
 
   // =========================
@@ -255,7 +255,7 @@ export const botConfig = {
 
     // Allowed winner count range.
     minimumWinners: 1,
-    maximumWinners: 1,
+    maximumWinners: 10,
 
     // Allowed giveaway duration range in milliseconds.
     // 300000 = 5 minutes.
@@ -268,7 +268,21 @@ export const botConfig = {
 
     // Role IDs that bypass giveaway restrictions.
     bypassRoles: [],
-  
+  },
+
+  // =========================
+  // BIRTHDAY SETTINGS
+  // =========================
+  birthday: {
+    // Role ID given to users on their birthday.
+    defaultRole: null,
+
+    // Channel ID where birthday announcements are posted.
+    announcementChannel: null,
+
+    // Timezone used to calculate birthday dates.
+    timezone: "UTC",
+  },
 
   // =========================
   // VERIFICATION SETTINGS
@@ -431,25 +445,25 @@ export const botConfig = {
     // Community engagement systems.
     tickets: true,
     giveaways: true,
-    birthday: false,
-    counter: false,
+    birthday: true,
+    counter: true,
 
     // Security and self-service systems.
     verification: true,
     reactionRoles: true,
-    joinToCreate: false,
+    joinToCreate: true,
 
     // Utility/quality-of-life modules.
-    voice: false,
-    search: false,
-    tools: false,
-    utility: false,
-    community: false,
-    fun: false,
+    voice: true,
+    search: true,
+    tools: true,
+    utility: true,
+    community: true,
+    fun: true,
   },
+};
 
 
-    
 export function validateConfig(config) {
   const errors = [];
 
@@ -529,7 +543,6 @@ export function getRandomColor() {
 }
 
 export default botConfig;
-
 
 
 
